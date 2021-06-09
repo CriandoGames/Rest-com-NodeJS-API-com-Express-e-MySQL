@@ -2,9 +2,12 @@ const conexao = require('../infraestrutura/conexao');
 
 class ModelAtendimento{
     adiciona(Atendimento){
-            const sql = 'INSERT INTO atendimentos SET ?'
+           
+            const dataCriacao = new Date();
+            const atendimentoDatado = {...Atendimento,dataCriacao}
 
-            conexao.query(sql, Atendimento, (erro, resultados) => {
+            const sql = 'INSERT INTO atendimentos SET ?'
+            conexao.query(sql, atendimentoDatado, (erro, resultados) => {
                 if(erro){
                     console.log(erro)
                 }else{
