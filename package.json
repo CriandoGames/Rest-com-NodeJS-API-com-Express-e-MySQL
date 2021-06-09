@@ -1,0 +1,22 @@
+{
+  "name": "rest-com-nodejs-api-com-express-e-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CriandoGames/Rest-com-NodeJS-API-com-Express-e-MySQL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CriandoGames/Rest-com-NodeJS-API-com-Express-e-MySQL/issues"
+  },
+  "homepage": "https://github.com/CriandoGames/Rest-com-NodeJS-API-com-Express-e-MySQL#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
