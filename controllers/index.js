@@ -1,4 +1,4 @@
 module.exports = app => {
-    app.get('/', (req,res)=> res.send('Servidor ON'));
+    app.get('/', (req, res) => res.send('Servidor ON'));
 
 }
