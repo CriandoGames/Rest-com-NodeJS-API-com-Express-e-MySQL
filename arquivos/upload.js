@@ -1,14 +1,9 @@
 const fs = require('fs');
 
-fs.readFile('./assets/logo_03.png', (erro, buffer) => {
+fs.createReadStream('./assets/logo_03.png').pipe(
+fs.createWriteStream('./assets/logo_stream.png')
+).on('finish',()=> console.log('Image foi criada'));
 
-  console.log('imagem Buffer OK');
-  console.log(buffer);
 
-fs.writeFile('./assets/logo_clone.png', buffer,erro => {
-  console.log("clone feito com sucesso atraves de buffer");
-});
-
-});
 
 
