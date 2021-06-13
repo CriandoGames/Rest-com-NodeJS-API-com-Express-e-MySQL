@@ -5,6 +5,7 @@ class Pet {
 	adiciona(pet, res) {
 		const query = 'INSERT INTO Pets SET ?'
 
+		
 
 		Updaload(pet.imagem, pet.nome, (novoCaminho) => {
 				const novoPet = {nome: pet.nome, imagem: novoCaminho};
