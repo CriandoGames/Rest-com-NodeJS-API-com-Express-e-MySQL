@@ -1,4 +1,4 @@
-const { default: axios } = require('axios');
+const axios  = require('axios');
 const moment = require('moment');
 const conexao = require('../infraestrutura/conexao');
 
@@ -11,17 +11,13 @@ class ModelAtendimento {
 
     const dataEhValida = moment(data).isSameOrAfter(dataCriacao);
 
+			console.log(dataEhValida)
 
     const vaalidacoes = [{
         nome: 'data',
         valido: dataEhValida,
         mensagem: 'ata deve ser maior ou igual a data atual'
       },
-      {
-        nome: 'data',
-        valido: dataEhValida,
-        mensagem: 'ata deve ser maior ou igual a data atual'
-      }
     ]
 
     const error = vaalidacoes.filter(campo => !campo.valido);

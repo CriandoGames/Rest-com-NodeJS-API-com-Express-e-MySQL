@@ -17,7 +17,7 @@ class Tabelas {
 			} else {
 				console.log('Veriificando tabelas');
 			}
-		});
+		}); 
 	}
 
 	criarPets() {
