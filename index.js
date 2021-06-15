@@ -1,6 +1,6 @@
 const config = require('./config/config');
-const conexao = require('./infraestrutura/conexao');
-const tabelas = require('./infraestrutura/tabelas');
+const conexao = require('./infraestrutura/provider/conexao');
+const tabelas = require('./infraestrutura/provider/tabelas');
 
 //conectar ao banco
 conexao.connect(erro => {
