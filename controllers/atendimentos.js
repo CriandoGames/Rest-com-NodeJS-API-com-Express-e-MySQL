@@ -2,21 +2,19 @@ const Atendimento = require('../models/model_atendimentos')
 
 module.exports = app => {
 	app.get('/atendimentos', (req, res) => {
-		Atendimento.lista(res);
+		Atendimento.lista().then(value => res.status(200).json(value)).catch(erros => res.status(400).json(erros));
 	});
 
 	app.get('/atendimentos/:id', (req, res) => {
 		const id = parseInt(req.params.id);
-
-		Atendimento.BuscarAtendimento(id, res);
-
+		Atendimento.BuscarAtendimento(id).then(value => res.status(200).json(value)).catch(erros => res.status(400).json(erros));
 	});
 
 	app.patch('/atendimentos/:id', (req, res) => {
 		const id = parseInt(req.params.id);
 		const valores = req.body;
 
-		Atendimento.altera(id, valores, res);
+		Atendimento.altera(id, valores).then(value => res.json(value)).catch(erros => res.status(400).json(erros));
 
 	});
 
@@ -30,6 +28,6 @@ module.exports = app => {
 
 	app.delete('/atendimentos/:id', (req, res) => {
 		const id = parseInt(req.params.id);
-		Atendimento.deleta(id, res);
+		Atendimento.deleta(id).then(value => res.json('Dados deletado com sucesso')).catch(erros => res.status(400).json(erros));
 	});
 }
